@@ -24,8 +24,8 @@ export interface PeriodicElement {
 export class WeatherTableComponent implements OnChanges, OnInit {
   @Input() weatherData: any;
   @Input() params: any;
-  @Input() isSearchFinished = false;
-  @Input() isLoading = false;
+  @Input() isSearchFinished: boolean|undefined;
+  @Input() isLoading: boolean|undefined;
   @Input() isTableReady: boolean|null = null;
   name = 'City Name';
   city = '';

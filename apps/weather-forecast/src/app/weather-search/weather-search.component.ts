@@ -15,7 +15,7 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 })
 export class WeatherSearchComponent implements OnInit {
   @Input() params: any;
-  @Input() citySearch = false;
+  @Input() citySearch: boolean|undefined;
   query = '';
   options$: Observable<City[]>;
   myControl = new FormControl();
