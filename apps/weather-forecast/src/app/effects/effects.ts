@@ -46,10 +46,7 @@ export class AppEffect {
                         map((weather: any) => WeatherActions.FetchWeatherSuccess({ payload: weather }))
                     )
                 }),
-                catchError(() => {
-                    console.log('ERROR')
-                    return of(WeatherActions.LoadTableError())
-                })
+                catchError(() => of(WeatherActions.LoadTableError()))
             )
         })
         ),{dispatch: true}

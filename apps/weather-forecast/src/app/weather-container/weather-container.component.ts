@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
-// import { select, Store } from '@ngrx/store';
-// import { WeatherState } from '../state/state';
-// import * as AppState  from '../state/state';
-// import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { weatherSelector, routeParamsSelector, WeatherState, isSearchFinishedSelector, citySearchSelector, isLoadingSelector, isTbleReadySelector } from '../state/state';
 
