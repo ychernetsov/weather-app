@@ -5,7 +5,7 @@ import { select, Store } from '@ngrx/store';
 // import * as AppState  from '../state/state';
 // import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { weatherSelector, routeParamsSelector, WeatherState, isSearchFinishedSelector, citySearchSelector, isLoadingSelector } from '../state/state';
+import { weatherSelector, routeParamsSelector, WeatherState, isSearchFinishedSelector, citySearchSelector, isLoadingSelector, isTbleReadySelector } from '../state/state';
 
 @Component({
   selector: 'weather-container',
@@ -18,6 +18,7 @@ export class WeatherContainerComponent {
   isSearchFinished$: Observable<any>;
   citySearch$: Observable<any>;
   isLoading$: Observable<any>;
+  isTableReady$: Observable<boolean|null>;
 
   constructor(private store: Store<WeatherState>) {
     this.weatherData$ = this.store.pipe(
@@ -30,15 +31,19 @@ export class WeatherContainerComponent {
 
     this.isSearchFinished$ = this.store.pipe(
       select(isSearchFinishedSelector)
-    )
+    );
 
     this.citySearch$ = this.store.pipe(
       select(citySearchSelector)
-    )
+    );
 
     this.isLoading$ = this.store.pipe(
       select(isLoadingSelector)
-    )
+    );
+
+    this.isTableReady$ = this.store.pipe(
+      select(isTbleReadySelector)
+    );
   }
 
 }

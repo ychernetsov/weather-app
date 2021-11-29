@@ -9,6 +9,7 @@ export const SET_ROUTE_PARAMS = 'SET_ROUTE_PARAMS';
 export const FETCH_CITY_AND_WEATHER = 'FETCH_CITY_AND_WEATHER';
 export const START_SEARCH = 'START_SEARCH';
 export const LOAD_TABLE = 'LOAD_TABLE';
+export const LOAD_TABLE_ERROR = 'LOAD_TABLE_ERROR';
 
 export const FetchWeather = createAction(
     FETCH_WEATHER,
@@ -50,6 +51,10 @@ export const LoadTable = createAction(
     props<{payload: boolean}>()
 );
 
+export const LoadTableError = createAction(
+    LOAD_TABLE_ERROR
+);
+
 
 const weatherActions = union({
     FetchWeather,
@@ -59,7 +64,8 @@ const weatherActions = union({
     setRouteParams,
     FetchCityAndWeather,
     StartSearch,
-    LoadTable
+    LoadTable,
+    LoadTableError
 });
 
 export type ActionsUnion = typeof weatherActions;

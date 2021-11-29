@@ -26,6 +26,7 @@ export class WeatherTableComponent implements OnChanges, OnInit {
   @Input() params: any;
   @Input() isSearchFinished = false;
   @Input() isLoading = false;
+  @Input() isTableReady: boolean|null = null;
   name = 'City Name';
   city = '';
   type = '';
@@ -35,11 +36,13 @@ export class WeatherTableComponent implements OnChanges, OnInit {
   data: any = [];
   mode: ProgressSpinnerMode = 'indeterminate';
   value = 50;
+  errorMessage = 'Something went wrong ...';
+  TABLE_COLUMNS = 8;
 
   constructor(private store: Store<WeatherState>) {}
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.weatherData.previousValue !== undefined && changes.weatherData.previousValue !== changes.weatherData.currentValue) {
+    if (changes.weatherData?.previousValue !== undefined && changes.weatherData?.previousValue !== changes.weatherData?.currentValue) {
       this.array = [this.transformTable(this.weatherData[this.type])];
       this.displayedColumns = ['City Name', ...this.getDisplayedColumns()];
       this.columnsToDisplay = this.displayedColumns.slice();
@@ -90,7 +93,7 @@ export class WeatherTableComponent implements OnChanges, OnInit {
     if (!this.weatherData[this.type]) {
       return [];
     }
-    const mod = this.weatherData[this.type].length / 8;
+    const mod = this.weatherData[this.type].length / this.TABLE_COLUMNS;
     return this.weatherData[this.type]
     .filter((_: any, i: number) => i % mod === 0)
       .map((el:any) => `${el.dt.toString()}000`)

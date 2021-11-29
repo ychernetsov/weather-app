@@ -7,6 +7,7 @@ export interface WeatherState {
     isLoading: boolean;
     citySearch: boolean;
     isSearchFinished: boolean;
+    isTableReady: boolean|null;
     weather: any;
     query: string;
     cities: City[];
@@ -19,6 +20,7 @@ export const defaultWeatherState: WeatherState = {
     isLoading: false,
     citySearch: false,
     isSearchFinished: false,
+    isTableReady: null,
     weather: [],
     query: '',
     cities: [],
@@ -35,3 +37,4 @@ export const isLoadingSelector = createSelector(appStateSelector, state => state
 export const citySearchSelector = createSelector(appStateSelector, state => state.citySearch);
 export const citiesSelector = createSelector(appStateSelector, state => state.cities);
 export const routeParamsSelector = createSelector(appStateSelector, state => state.routeParams);
+export const isTbleReadySelector = createSelector(appStateSelector, state => state.isTableReady);

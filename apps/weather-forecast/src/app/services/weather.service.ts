@@ -6,7 +6,7 @@ import { Coordinates } from '../models/models';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    Accept: 'application/json, text/plain, */*',
+    Accept: 'application/json, text/plain, */*'
   })
 };
 
@@ -35,4 +35,5 @@ const httpOptions = {
       const toExclude = this.exclude.filter(item => item !== type).join(',');
       return this.BASE_URL.replace('{exclude}', toExclude);
     }
+
   }

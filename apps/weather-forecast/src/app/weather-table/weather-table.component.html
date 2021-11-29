@@ -19,3 +19,4 @@
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
 </table>
+<div *ngIf="isTableReady === false" class="error-message">{{ errorMessage }}</div>
