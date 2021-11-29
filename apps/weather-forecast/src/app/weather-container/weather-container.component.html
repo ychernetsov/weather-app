@@ -1,0 +1,10 @@
+<weather-search
+    [citySearch]="citySearch$ | async"
+    [params]="routeParams$ | async">
+</weather-search>
+<weather-table
+    [isSearchFinished]="isSearchFinished$ | async"
+    [weatherData]="weatherData$ | async"
+    [isLoading]="isLoading$ | async"
+    [params]="routeParams$ | async">
+</weather-table>

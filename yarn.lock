@@ -179,6 +179,15 @@
   dependencies:
     tslib "^2.2.0"
 
+"@angular/cdk@^13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-13.0.2.tgz#48b9c00d24c9e764c0a718873acf8c6779241a35"
+  integrity sha512-m7RHIAXpFpgsrydhWXX1hAXRmQpQ+m9eRCYAoz8QiDCchYyVvTaxkZ8J7XGS8RtJ2EiocXSp4TlwQQrpXe+4lg==
+  dependencies:
+    tslib "^2.3.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@12.2.12":
   version "12.2.12"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-12.2.12.tgz#ce4eeb8889eecb51a1a2af4fb69d3d2ce11728dd"
@@ -256,6 +265,13 @@
   version "12.2.12"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-12.2.12.tgz#4885a40e33ae73c2dfabe596b3899768a5f27aaa"
   integrity sha512-0DRsZilDkYa6FFHwm5dT70ydWvDquT/zj3qyeznwFxfiulzMNEAXvfQbi91eZ/0yJB9DSdS4ma2UgXMaFpMStw==
+
+"@angular/material@^13.0.2":
+  version "13.0.2"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-13.0.2.tgz#bbab63f69c9227110b7e22d694fe984528b3d5c2"
+  integrity sha512-DbbkQFpZ73oxOuR9LkkpeUPWP31DNIG3Z94sOrtdBhX3HfbLLOCaAJAIwMl8+bEuzDgtWBmx3taUR8l4WKCO8g==
+  dependencies:
+    tslib "^2.3.0"
 
 "@angular/platform-browser-dynamic@12.2.12":
   version "12.2.12"
@@ -1555,6 +1571,34 @@
     loader-utils "^2.0.0"
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
+
+"@ngrx/effects@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-13.0.1.tgz#93f78c54959f747fa344744d365a59dfce978285"
+  integrity sha512-MsQuR+ufK9xTBKmzpt9P32BEuXVtu6bxIBw7LmrR73MyMsmpXcrdvdax9CIPCugOEITXcfcoJfj8iT+WPoAHmQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/router-store@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-13.0.1.tgz#1f09b691fcbc6f9659cef04bb8c19e6ac4a6d05d"
+  integrity sha512-tYuz/L7ywMByzgIwfDDGaFTgEbhzbu3sw0TR08ieE9TTv9mtIPpUEVc3mEb857lKSkYvaPzTYpJhhZoE27ZIqg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store-devtools@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-13.0.1.tgz#bd1c2e4de1195fae9785cf79a3e5bfb6d51a8b6b"
+  integrity sha512-iIdneTVMiyCWZKxaG7KPLTfrkCIKGrQ61W1ay0PhbqjZE7jgY/TRsp7OWai9WzBStxjU+gunEocEA7dPL0hYIQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-13.0.1.tgz#85ad5335292d37f2554f9a16cdc80646e8eebee9"
+  integrity sha512-YCArklbrZNeFN9I2Ibvl+M8sgepwY36n1aGzyEL6R4iK6VWaqpJAwOIlQ+41qyztelallyzz5waQmCLa+OQ38w==
+  dependencies:
+    tslib "^2.0.0"
 
 "@ngtools/webpack@12.2.12":
   version "12.2.12"
@@ -8350,6 +8394,11 @@ parse5@6.0.1, parse5@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-6.0.1.tgz#e1a1c085c569b3dc08321184f19a39cc27f7c30b"
   integrity sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==
+
+parse5@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
+  integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
 
 parseurl@~1.3.2, parseurl@~1.3.3:
   version "1.3.3"

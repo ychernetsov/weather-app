@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-title>Weather Forecast</mat-card-title>
+    <mat-card-content>
+        <mat-form-field>
+            <mat-autocomplete #auto="matAutocomplete">
+                <ng-container *ngIf="query && query.length > 1">  
+                    <mat-option  *ngFor="let option of options$ | async" 
+                                 [value]="option.name" 
+                                 (click)="makeSearch(option)">
+                                 {{option.name}}
+                    </mat-option>
+                </ng-container>  
+            </mat-autocomplete>
+            <input matInput placeholder="Search for a city" 
+                [value]="query" 
+                (keyup)="searchTerm($event)"
+                matInput
+                [matAutocomplete]="auto"
+            >
+            <mat-progress-spinner
+                *ngIf="citySearch"
+                [mode]="mode"
+                [value]="value"
+                [diameter]="30"
+                [strokeWidth]="3">
+            </mat-progress-spinner>
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>
+    
